@@ -1,0 +1,2 @@
+# SenlaCourse
+AI learning 
