@@ -39,7 +39,7 @@ class CalcViewController: UIViewController {
     {
         if (result.truncatingRemainder(dividingBy: 1) == 0)
         {
-            return String(format: "%.0f", result)
+            return String(format: "%.00f", result)
         }
         else
         {
@@ -125,13 +125,17 @@ class CalcViewController: UIViewController {
     
     @IBAction func equalTap(_ sender: Any) {
         if (calcStatus.text?.last == "+" || calcStatus.text?.last == "*" || calcStatus.text?.last == "/"
-            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-")
+            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-" || calcStatus.text?.last == nil)
         {
             return
         }
         if (calcStatus.text?.last == ".")
         {
             addToStatus(value: "0")
+        }
+        if (status.contains("/") && !status.contains("."))
+        {
+            addToStatus(value: ".0")
         }
         let checkedForPercent = status.replacingOccurrences(of: "%", with: "*0.01*")
         print(checkedForPercent)
@@ -209,7 +213,5 @@ class CalcViewController: UIViewController {
     @IBAction func nineTap(_ sender: Any) {
         addToStatus(value: "9")
     }
-    
-    
     
 }

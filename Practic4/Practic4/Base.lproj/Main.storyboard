@@ -379,7 +379,7 @@
                                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="threeTap:" destination="o0E-FA-hEL" eventType="touchUpInside" id="yxi-zj-Ukm"/>
+                                                    <action selector="twoTap:" destination="o0E-FA-hEL" eventType="touchUpInside" id="yqw-79-1jJ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T56-Qe-OYR">
