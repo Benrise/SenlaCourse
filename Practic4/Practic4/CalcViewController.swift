@@ -17,6 +17,7 @@ class CalcViewController: UIViewController {
     
     var status = ""
     var currentOperator = ""
+    var pointFlag = false
     
     
     func clearAll()
@@ -137,22 +138,27 @@ class CalcViewController: UIViewController {
         print(result)
         let resultString = formatResult(result: result)
         calcResult.text = resultString
+        pointFlag = false
         
     }
     
     //digits
     
     @IBAction func commaTap(_ sender: Any) {
-        if (calcStatus.text?.last == "%")
+        
+        
+        if (calcStatus.text?.last == "%" || calcStatus.text?.last == "." || pointFlag)
         {
             return
         }
         if (calcStatus.text == "")
         {
+            pointFlag = true
             addToStatus(value: "0.")
         }
         else
         {
+            pointFlag = true
             addToStatus(value: ".")
         }
         
