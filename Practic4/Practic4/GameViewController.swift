@@ -29,6 +29,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resetButton.isHidden = true
+        robotButton.isEnabled = false
     }
     
     

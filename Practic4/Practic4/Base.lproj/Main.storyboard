@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Te-tt-xgY">
-                                <rect key="frame" x="98" y="561" width="218" height="52.5"/>
+                                <rect key="frame" x="98" y="610.5" width="218" height="52.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Играть снова">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="32"/>
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlv-g8-dKC">
-                                <rect key="frame" x="176" y="78" width="62" height="44"/>
+                                <rect key="frame" x="100" y="78" width="214" height="44"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system" title="">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
@@ -124,15 +124,15 @@
                         <viewLayoutGuide key="safeArea" id="I36-bx-h5y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="I36-bx-h5y" firstAttribute="bottom" secondItem="2Te-tt-xgY" secondAttribute="bottom" constant="199.5" id="08E-Iy-y96"/>
+                            <constraint firstItem="I36-bx-h5y" firstAttribute="bottom" secondItem="2Te-tt-xgY" secondAttribute="bottom" constant="150" id="08E-Iy-y96"/>
                             <constraint firstItem="NaQ-RH-6Ox" firstAttribute="top" secondItem="aXM-wH-Y2b" secondAttribute="bottom" constant="8" symbolic="YES" id="4jn-sX-Kx0"/>
-                            <constraint firstItem="xlv-g8-dKC" firstAttribute="leading" secondItem="I36-bx-h5y" secondAttribute="leading" constant="176" id="JH5-qn-SVM"/>
+                            <constraint firstItem="xlv-g8-dKC" firstAttribute="leading" secondItem="I36-bx-h5y" secondAttribute="leading" constant="100" id="JH5-qn-SVM"/>
                             <constraint firstItem="2Te-tt-xgY" firstAttribute="centerX" secondItem="kOC-xW-lD6" secondAttribute="centerX" id="e4A-96-wB9"/>
                             <constraint firstItem="NaQ-RH-6Ox" firstAttribute="centerX" secondItem="kOC-xW-lD6" secondAttribute="centerX" id="gXh-ut-V6X"/>
                             <constraint firstItem="aXM-wH-Y2b" firstAttribute="centerX" secondItem="kOC-xW-lD6" secondAttribute="centerX" id="jcO-hh-wkU"/>
                             <constraint firstItem="xlv-g8-dKC" firstAttribute="top" secondItem="I36-bx-h5y" secondAttribute="top" constant="34" id="mok-k1-zjp"/>
                             <constraint firstItem="NaQ-RH-6Ox" firstAttribute="centerY" secondItem="kOC-xW-lD6" secondAttribute="centerY" id="uxM-YI-jJm"/>
-                            <constraint firstItem="I36-bx-h5y" firstAttribute="trailing" secondItem="xlv-g8-dKC" secondAttribute="trailing" constant="176" id="xxn-R1-K0k"/>
+                            <constraint firstItem="I36-bx-h5y" firstAttribute="trailing" secondItem="xlv-g8-dKC" secondAttribute="trailing" constant="100" id="xxn-R1-K0k"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Играть" image="gamecontroller" catalog="system" selectedImage="gamecontroller" id="A1M-nF-2Vy">

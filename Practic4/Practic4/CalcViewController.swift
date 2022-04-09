@@ -25,6 +25,7 @@ class CalcViewController: UIViewController {
         status = ""
         calcStatus.text = ""
         calcResult.text = ""
+        pointFlag = false
     }
     
     func addToStatus(value: String)
@@ -68,6 +69,11 @@ class CalcViewController: UIViewController {
     }
     
     @IBAction func percentTap(_ sender: Any) {
+        if (calcStatus.text?.last == "+" || calcStatus.text?.last == "*" || calcStatus.text?.last == "/"
+            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-" || calcStatus.text?.last == nil)
+        {
+            return
+        }
         if (calcStatus.text?.last == ".")
         {
             addToStatus(value: "0")
@@ -76,9 +82,15 @@ class CalcViewController: UIViewController {
         {
             addToStatus(value: "%")
         }
+        pointFlag = false
     }
     
     @IBAction func divideTap(_ sender: Any) {
+        if (calcStatus.text?.last == "+" || calcStatus.text?.last == "*" || calcStatus.text?.last == "/"
+            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-" || calcStatus.text?.last == nil)
+        {
+            return
+        }
         if (calcStatus.text?.last == ".")
         {
             addToStatus(value: "0")
@@ -87,9 +99,15 @@ class CalcViewController: UIViewController {
         {
             addToStatus(value: "/")
         }
+        pointFlag = false
     }
     
     @IBAction func xTap(_ sender: Any) {
+        if (calcStatus.text?.last == "+" || calcStatus.text?.last == "*" || calcStatus.text?.last == "/"
+            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-" || calcStatus.text?.last == nil)
+        {
+            return
+        }
         if (calcStatus.text?.last == ".")
         {
             addToStatus(value: "0")
@@ -98,10 +116,16 @@ class CalcViewController: UIViewController {
         {
             addToStatus(value: "*")
         }
+        pointFlag = false
     }
     
     
     @IBAction func minusTap(_ sender: Any) {
+        if (calcStatus.text?.last == "+" || calcStatus.text?.last == "*" || calcStatus.text?.last == "/"
+            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-" || calcStatus.text?.last == nil)
+        {
+            return
+        }
         if (calcStatus.text?.last == ".")
         {
             addToStatus(value: "0")
@@ -110,9 +134,15 @@ class CalcViewController: UIViewController {
         {
             addToStatus(value: "-")
         }
+        pointFlag = false
     }
     
     @IBAction func plusTap(_ sender: Any) {
+        if (calcStatus.text?.last == "+" || calcStatus.text?.last == "*" || calcStatus.text?.last == "/"
+            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-" || calcStatus.text?.last == nil)
+        {
+            return
+        }
         if (calcStatus.text?.last == ".")
         {
             addToStatus(value: "0")
@@ -121,6 +151,8 @@ class CalcViewController: UIViewController {
         {
             addToStatus(value: "+")
         }
+        
+        pointFlag = false
     }
     
     @IBAction func equalTap(_ sender: Any) {
@@ -156,7 +188,8 @@ class CalcViewController: UIViewController {
     @IBAction func commaTap(_ sender: Any) {
         
         
-        if (calcStatus.text?.last == "%" || calcStatus.text?.last == "." || pointFlag)
+        if (calcStatus.text?.last == "%" || calcStatus.text?.last == "." || pointFlag || calcStatus.text?.last == "*" ||
+            calcStatus.text?.last == "/" || calcStatus.text?.last == "+" || calcStatus.text?.last == "-")
         {
             return
         }
