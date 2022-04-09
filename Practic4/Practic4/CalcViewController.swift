@@ -124,6 +124,11 @@ class CalcViewController: UIViewController {
     }
     
     @IBAction func equalTap(_ sender: Any) {
+        if (calcStatus.text?.last == "+" || calcStatus.text?.last == "*" || calcStatus.text?.last == "/"
+            || calcStatus.text?.last == "%" || calcStatus.text?.last == "-")
+        {
+            return
+        }
         if (calcStatus.text?.last == ".")
         {
             addToStatus(value: "0")

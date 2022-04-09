@@ -109,16 +109,30 @@
                                     <action selector="robotButton:" destination="PoC-oY-Pbm" eventType="touchUpInside" id="T7q-TW-M0a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlv-g8-dKC">
+                                <rect key="frame" x="176" y="78" width="62" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system" title="">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="25"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="vEs-9g-B1B" kind="show" id="qKb-sL-Ghr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="I36-bx-h5y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I36-bx-h5y" firstAttribute="bottom" secondItem="2Te-tt-xgY" secondAttribute="bottom" constant="199.5" id="08E-Iy-y96"/>
                             <constraint firstItem="NaQ-RH-6Ox" firstAttribute="top" secondItem="aXM-wH-Y2b" secondAttribute="bottom" constant="8" symbolic="YES" id="4jn-sX-Kx0"/>
+                            <constraint firstItem="xlv-g8-dKC" firstAttribute="leading" secondItem="I36-bx-h5y" secondAttribute="leading" constant="176" id="JH5-qn-SVM"/>
                             <constraint firstItem="2Te-tt-xgY" firstAttribute="centerX" secondItem="kOC-xW-lD6" secondAttribute="centerX" id="e4A-96-wB9"/>
                             <constraint firstItem="NaQ-RH-6Ox" firstAttribute="centerX" secondItem="kOC-xW-lD6" secondAttribute="centerX" id="gXh-ut-V6X"/>
                             <constraint firstItem="aXM-wH-Y2b" firstAttribute="centerX" secondItem="kOC-xW-lD6" secondAttribute="centerX" id="jcO-hh-wkU"/>
+                            <constraint firstItem="xlv-g8-dKC" firstAttribute="top" secondItem="I36-bx-h5y" secondAttribute="top" constant="34" id="mok-k1-zjp"/>
                             <constraint firstItem="NaQ-RH-6Ox" firstAttribute="centerY" secondItem="kOC-xW-lD6" secondAttribute="centerY" id="uxM-YI-jJm"/>
+                            <constraint firstItem="I36-bx-h5y" firstAttribute="trailing" secondItem="xlv-g8-dKC" secondAttribute="trailing" constant="176" id="xxn-R1-K0k"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Играть" image="gamecontroller" catalog="system" selectedImage="gamecontroller" id="A1M-nF-2Vy">
@@ -477,9 +491,57 @@
             </objects>
             <point key="canvasLocation" x="-543.47826086956525" y="375"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="c5D-IY-fdA">
+            <objects>
+                <viewController id="vEs-9g-B1B" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pqm-AK-5nf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила игры" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sio-rZ-FBO">
+                                <rect key="frame" x="50" y="395" width="314" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чтобы играть, просто тапните по соответствующему предмету." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QX-3g-dBV">
+                                <rect key="frame" x="50" y="451" width="314" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На экран будет выведен результат раунда." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lz-BD-kyj">
+                                <rect key="frame" x="5" y="512" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vdp-vi-sRU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vdp-vi-sRU" firstAttribute="trailing" secondItem="sio-rZ-FBO" secondAttribute="trailing" constant="50" id="0p6-ec-M0s"/>
+                            <constraint firstItem="vdp-vi-sRU" firstAttribute="bottom" secondItem="3QX-3g-dBV" secondAttribute="bottom" constant="316" id="ABz-t0-RHm"/>
+                            <constraint firstItem="3QX-3g-dBV" firstAttribute="top" secondItem="sio-rZ-FBO" secondAttribute="bottom" constant="20" id="F4s-4e-c2r"/>
+                            <constraint firstAttribute="trailing" secondItem="3QX-3g-dBV" secondAttribute="trailing" constant="50" id="JoD-dQ-trd"/>
+                            <constraint firstItem="9Lz-BD-kyj" firstAttribute="leading" secondItem="vdp-vi-sRU" secondAttribute="leading" constant="5" id="OUS-zC-b5y"/>
+                            <constraint firstItem="sio-rZ-FBO" firstAttribute="leading" secondItem="vdp-vi-sRU" secondAttribute="leading" constant="50" id="TPo-05-mLZ"/>
+                            <constraint firstItem="9Lz-BD-kyj" firstAttribute="top" secondItem="3QX-3g-dBV" secondAttribute="bottom" constant="20" id="dbz-Oa-5VY"/>
+                            <constraint firstItem="3QX-3g-dBV" firstAttribute="leading" secondItem="pqm-AK-5nf" secondAttribute="leading" constant="50" id="od1-Zx-lKY"/>
+                            <constraint firstItem="9Lz-BD-kyj" firstAttribute="trailing" secondItem="vdp-vi-sRU" secondAttribute="trailing" constant="5" id="ycu-lR-gw4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VzZ-Nj-Q9B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIQ-WI-Eui" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2091.304347826087" y="1123.6607142857142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="plus.slash.minus" catalog="system" width="128" height="115"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
