@@ -19,7 +19,6 @@ class CalcViewController: UIViewController {
     var currentOperator = ""
     
     
-    
     func clearAll()
     {
         status = ""
@@ -128,7 +127,7 @@ class CalcViewController: UIViewController {
         {
             addToStatus(value: "0")
         }
-        let checkedForPercent = status.replacingOccurrences(of: "%", with: "*(1/100)*")
+        let checkedForPercent = status.replacingOccurrences(of: "%", with: "*0.01*")
         print(checkedForPercent)
         print(" ")
         let expression = NSExpression(format: checkedForPercent)
