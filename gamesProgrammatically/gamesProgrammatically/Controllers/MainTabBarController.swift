@@ -13,6 +13,8 @@ class MainTabBarController: UITabBarController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupTabBar()
+        
+        
     }
 
     func setupTabBar()
@@ -21,7 +23,12 @@ class MainTabBarController: UITabBarController {
         
         let calcVeiwController = createNavController(vc: CalcViewController(), itemName: "Калькулятор", ItemImage: "plus.forwardslash.minus")
         
+        
         viewControllers = [gameVeiwController, calcVeiwController]
+        
+        self.tabBar.tintColor = .black
+        self.tabBar.barTintColor = .black
+        self.tabBar.isTranslucent = true
         
     }
 
