@@ -54,7 +54,7 @@ class GameViewController: UIViewController {
         statusStackView.spacing = 20
         setupButton(btn: robotButton, title: "🤖", item: 99)
         
-        robotButton.set(fontSize:100)
+        robotButton.setFontSize(fontSize:100)
         status.font = status.font.withSize(25)
         
         statusStackView.axis = NSLayoutConstraint.Axis.vertical
@@ -64,7 +64,7 @@ class GameViewController: UIViewController {
         statusStackView.addArrangedSubview(status)
 
         setupButton(btn: resetButton, title: "Играть снова", item: -4)
-        resetButton.set(fontSize: 40)
+        resetButton.setFontSize(fontSize: 40)
         
         mainStackView.addArrangedSubview(statusStackView)
         mainStackView.addArrangedSubview(btnStackView)
@@ -82,7 +82,7 @@ class GameViewController: UIViewController {
         btn.setTitle(title, for: .normal)
         btn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         btn.setTitleColor(UIColor.black, for: .normal)
-        btn.set(fontSize: 70)
+        btn.setFontSize(fontSize: 70)
         btn.tag = item
     }
     
@@ -175,7 +175,7 @@ class GameViewController: UIViewController {
 }
 
 extension UIButton {
-    func set(fontSize: CGFloat)
+    func setFontSize(fontSize: CGFloat)
     {
         self.titleLabel?.font = self.titleLabel?.font.withSize(fontSize)
     }
