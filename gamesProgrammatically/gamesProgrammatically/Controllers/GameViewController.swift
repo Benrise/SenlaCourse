@@ -45,9 +45,8 @@ class GameViewController: UIViewController {
         mainStackView.distribution = .fillEqually
         mainStackView.alignment = .center
         
-//        mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-//        mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
-//        mainStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
+//        mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+//        mainStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
 
         status.text = "Камень, Ножницы, Бумага?"
         status.textAlignment = .center
@@ -72,8 +71,8 @@ class GameViewController: UIViewController {
         
         view.addSubview(mainStackView)
         
-        mainStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        mainStackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        mainStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        mainStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
     }
     
