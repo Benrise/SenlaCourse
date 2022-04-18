@@ -11,14 +11,44 @@ class CalcViewController: UIViewController {
     
     let mainViewStack: UIStackView = {
         let stackView = UIStackView()
-        stackView.axis = NSLayoutConstraint.Axis.horizontal
+        stackView.axis = NSLayoutConstraint.Axis.vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.backgroundColor = .gray
-        
-        
-        
         return stackView
     }()
+    
+    let labelsViewStack: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = NSLayoutConstraint.Axis.vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.backgroundColor = .darkGray
+        return stackView
+    }()
+    
+    let functionalViewStack: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = NSLayoutConstraint.Axis.vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.backgroundColor = .black
+        return stackView
+    }()
+    
+    let statusLabel: UILabel = {
+        let label = UILabel()
+        label.font = label.font.withSize(45)
+        label.text = "10+12"
+        label.textAlignment = .right
+        return label
+    }()
+    
+    let resultLabel: UILabel = {
+        let label = UILabel()
+        label.font = label.font.withSize(45)
+        label.text = "12"
+        label.textAlignment = .right
+        return label
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +56,10 @@ class CalcViewController: UIViewController {
         title = "Calculator"
         
         view.addSubview(mainViewStack)
+        
         setupMain()
+        setupLabels()
+        setupFunctional()
     }
 
     
@@ -34,17 +67,37 @@ class CalcViewController: UIViewController {
     {
         mainViewStack.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         mainViewStack.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        mainViewStack.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
-        
+        mainViewStack.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        mainViewStack.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         mainViewStack.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        mainViewStack.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.755).isActive = true
-        
-        
-        
         
     }
-    
+    func setupLabels()
+    {
+        labelsViewStack.addArrangedSubview(statusLabel)
+        labelsViewStack.addArrangedSubview(resultLabel)
+        
+        mainViewStack.addArrangedSubview(labelsViewStack)
+        
+        labelsViewStack.leftAnchor.constraint(equalTo: mainViewStack.leftAnchor).isActive = true
+        labelsViewStack.rightAnchor.constraint(equalTo: mainViewStack.rightAnchor).isActive = true
+        labelsViewStack.topAnchor.constraint(equalTo: mainViewStack.topAnchor).isActive = true
+
+        labelsViewStack.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        labelsViewStack.heightAnchor.constraint(equalTo: mainViewStack.widthAnchor, multiplier: 1/4).isActive = true
+    }
+    func setupFunctional()
+    {
+        mainViewStack.addArrangedSubview(functionalViewStack)
+        
+        functionalViewStack.leftAnchor.constraint(equalTo: mainViewStack.leftAnchor).isActive = true
+        labelsViewStack.rightAnchor.constraint(equalTo: mainViewStack.rightAnchor).isActive = true
+        labelsViewStack.topAnchor.constraint(equalTo: labelsViewStack.topAnchor).isActive = true
+        
+        labelsViewStack.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        labelsViewStack.heightAnchor.constraint(equalTo: mainViewStack.widthAnchor).isActive = true
+    }
 }
 
 
